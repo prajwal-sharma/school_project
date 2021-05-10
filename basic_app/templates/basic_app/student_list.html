@@ -1,0 +1,14 @@
+{% extends "basic_app/basic_app_base.html" %}
+{% block content %}
+  <div class="jumbotron">
+
+    <h1>Welcome to the List of Student Page!</h1>
+      <ol>
+        {% for student in student_list %}
+          <h2><li><a href="{{student.id}}/">{{student.name}} </a></li></h2>
+        {% endfor %}
+      </ol>
+  </div>
+
+
+{% endblock %}

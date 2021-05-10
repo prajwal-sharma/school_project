@@ -1,0 +1,26 @@
+{% extends "basic_app/basic_app_base.html" %}
+{% block content %}
+  <div class="jumbotron">
+    <h1>Welcome to the Student Detail Page</h1>
+    <h2>Student Details:</h2>
+    <p>Id_num: {{student_details.id}}</p>
+    <p>Name: {{student_details.name}}</p>
+    <p>Age: {{student_details.age}}</p>
+    <p>School: {{student_details.school}}</p>
+<!--    <h3>Students:</h3>-->
+
+<!--      {% for student in student_details.students.all %}-->
+<!--        <p>{{student.name}} who is {{student.age}} years old.</p>-->
+<!--      {% endfor %}-->
+
+  </div>
+ <div class="container">
+    <p><a class='btn btn-warning' href="{% url 'basic_app:deletestudent' pk=student_details.pk %}">Delete</a></p>
+
+  </div>
+<!--  <div class="container">-->
+<!--    <p><a class='btn btn-warning' href="{% url 'basic_app:update' pk=student_details.pk %}">Update</a></p>-->
+
+<!--  </div>-->
+
+{% endblock %}
